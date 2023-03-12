@@ -1,6 +1,5 @@
 const { remote } = require('webdriverio');
 const assert = require('assert');
-const { reverse } = require('dns');
 
 describe('remove items from cart', () => {
   let browser;
@@ -10,7 +9,7 @@ describe('remove items from cart', () => {
       capabilities: {
         browserName: 'chrome',
         'goog:chromeOptions':{
-          args: []
+          args: ['headless']
         }
       }
     });
@@ -64,7 +63,7 @@ describe('remove items from cart', () => {
     
   });
 
-//   after(async () => {
-//     await browser.deleteSession();
-//   });
+  after(async () => {
+    await browser.deleteSession();
+  });
 });
