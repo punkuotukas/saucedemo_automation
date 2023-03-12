@@ -1,0 +1,29 @@
+{
+  "name": "saucedemo_automation_2",
+  "version": "1.0.0",
+  "description": "sacedemo.com login and interaction automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "author": "Adomas Vysniauskas",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chai-jquery": "^2.1.0",
+    "chai-webdriverio": "^1.0.0",
+    "webdriver": "^8.5.7",
+    "webdriverio": "^8.5.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@wdio/browser-runner": "^8.5.9",
+    "@wdio/cli": "^8.5.9",
+    "@wdio/mocha-framework": "^8.5.6",
+    "@wdio/spec-reporter": "^8.4.0",
+    "chromedriver": "^111.0.0",
+    "mocha": "^10.2.0",
+    "wdio-chromedriver-service": "^8.1.1"
+  }
+}
