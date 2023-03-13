@@ -25,7 +25,7 @@ describe('remove items from cart', () => {
     const invList = await browser.$('.inventory_list');
     await invList.waitForDisplayed();
   
-    // Select and click the buttons
+    // Select and click add buttons
     const addButtons = await invList.$$('.btn.btn_primary.btn_small.btn_inventory');
     let itemsNum = 0;
     for (let i = 0; i < addButtons.length; i++) {
@@ -45,6 +45,7 @@ describe('remove items from cart', () => {
     }
     assert (itemsNum == 6);
 
+    // // Select and click remove buttons
     const removeButtons = await invList.$$('.btn.btn_secondary.btn_small.btn_inventory');
     let itemsLeft = itemsNum
     for (let i = 6; i >= 1; i--) {
@@ -57,7 +58,7 @@ describe('remove items from cart', () => {
         }
         else if (i == 1) {
             await removeButtons[0].click();
-            assert (browser.$('#shopping_cart_container > a > span').waitForExist({ reverse: true}));
+            assert (browser.$('#shopping_cart_container > a > span').waitForExist({ reverse: true})); // assert that shopping cart size badge does not exist after last item is removed
         }
         }
     

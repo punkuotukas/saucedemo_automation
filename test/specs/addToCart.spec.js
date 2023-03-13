@@ -1,5 +1,7 @@
 const { remote } = require('webdriverio');
 const assert = require('assert');
+const { getText } = require('webdriverio/build/commands/element');
+
 
 describe('add items to cart', () => {
   let browser;
@@ -39,7 +41,7 @@ describe('add items to cart', () => {
       else if (i > 0) {
         const cartBadge = browser.$('#shopping_cart_container > a > span');
         await cartBadge.isDisplayed();
-        itemsNum = await cartBadge.getText();
+        itemsNum = await cartBadge.textContent;
         assert (itemsNum == i+1);
       }
     }
