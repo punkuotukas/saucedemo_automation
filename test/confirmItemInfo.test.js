@@ -1,4 +1,4 @@
-const itemData = require('../../test-data.json')
+const itemData = require('../test-data.json')
 const  expect = require('chai').expect;
 const { remote } = require('webdriverio');
 const { assert } = require('chai');
