@@ -12,7 +12,6 @@
   "dependencies": {
     "chai": "^4.3.7",
     "chai-jquery": "^2.1.0",
-    "chai-webdriverio": "^1.0.0",
     "webdriver": "^8.5.7",
     "webdriverio": "^8.5.9"
   },
